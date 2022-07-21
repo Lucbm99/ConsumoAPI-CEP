@@ -4,21 +4,16 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CepService {
-
   private baseURL: string = 'https://cep.awesomeapi.com.br/';
 
-  constructor(
-    private _httpClient: HttpClient,
-  ) { }
+  constructor(private _httpClient: HttpClient) {}
 
   public searchCEP(): Observable<any> {
-    return this._httpClient.get<any>(`${this.baseURL}json/13904018`)
-      .pipe(
-        map((data: any) => 
-          data.data
-    ))
+    return this._httpClient
+      .get<any>(`${this.baseURL}json/13902170`)
+      .pipe(map((data: any) => data));
   }
 }

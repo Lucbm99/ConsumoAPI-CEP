@@ -1,0 +1,19 @@
+.descricao {
+    text-align: center;
+    font-size: 1.4rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #fff;
+}
+.cep-form {
+    background-color: #373636;
+    outline: #fff;
+    padding: 5rem;
+    border-radius: 5rem;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input {
+    color: #fff;
+}

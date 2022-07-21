@@ -1,6 +1,24 @@
-<form class="example-form">
-    <mat-form-field class="example-full-width" appearance="fill">
-      <mat-label>Company (disabled)</mat-label>
-      <input matInput disabled value="Google">
-    </mat-form-field>
+<form class="cep-form">
+  <h4 class="descricao">Digite o CEP abaixo e verifique de qual endereço ele é:</h4>
+  <mat-form-field appearance="outline">
+    <mat-label>CEP</mat-label>
+    <input matInput type="text" [value]="dataCEP.cep">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Endereço</mat-label>
+    <input matInput type="text" readonly [value]="dataCEP.address">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Bairro</mat-label>
+    <input matInput readonly [value]="dataCEP.district">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Cidade</mat-label>
+    <input matInput readonly [value]="dataCEP.city">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Estado</mat-label>
+    <input matInput readonly [value]="dataCEP.state">
+  </mat-form-field>
+  <button (click)="searchCep()">Buscar</button>
 </form>  

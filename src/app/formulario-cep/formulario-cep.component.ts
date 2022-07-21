@@ -22,4 +22,7 @@ export class FormularioCepComponent implements OnInit {
     })
   }
 
+  searchCep() {
+
+  }
 }
