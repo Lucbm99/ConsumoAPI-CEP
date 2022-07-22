@@ -1,24 +1,24 @@
-<form class="cep-form">
+<form class="cep-form" [formGroup]="cepForm">
   <h4 class="descricao">Digite o CEP abaixo e verifique de qual endereço ele é:</h4>
   <mat-form-field appearance="outline">
     <mat-label>CEP</mat-label>
-    <input matInput type="text" [value]="dataCEP.cep">
+    <input matInput type="text" [formControlName]="'valorCEP'">
   </mat-form-field>
   <mat-form-field appearance="outline">
     <mat-label>Endereço</mat-label>
-    <input matInput type="text" readonly [value]="dataCEP.address">
+    <input matInput type="text" readonly [formControlName]="'address'" [value]="address">
   </mat-form-field>
   <mat-form-field appearance="outline">
     <mat-label>Bairro</mat-label>
-    <input matInput readonly [value]="dataCEP.district">
+    <input matInput readonly [formControlName]="'district'" [value]="district">
   </mat-form-field>
   <mat-form-field appearance="outline">
     <mat-label>Cidade</mat-label>
-    <input matInput readonly [value]="dataCEP.city">
+    <input matInput readonly [formControlName]="'city'" [value]="city">
   </mat-form-field>
   <mat-form-field appearance="outline">
     <mat-label>Estado</mat-label>
-    <input matInput readonly [value]="dataCEP.state">
+    <input matInput readonly [formControlName]="'state'" [value]="state">
   </mat-form-field>
   <button (click)="searchCep()">Buscar</button>
 </form>  
