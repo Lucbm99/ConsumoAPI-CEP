@@ -1,19 +1,29 @@
 .descricao {
     text-align: center;
     font-size: 1.4rem;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #fff;
+    font-family: 'Dosis', sans-serif;
+    color: #000;
 }
 .cep-form {
-    background-color: #373636;
-    outline: #fff;
+    background-color: #45CBA7;
+    outline: #000;
     padding: 5rem;
-    border-radius: 5rem;
-    
+    height: 100vh;
+}
+.fields {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 1px solid #000; 
+    border-radius: 2rem;
+    padding: 1rem;
 }
 input {
-    color: #fff;
+    color: #000;
+}
+
+@media (min-width: 320px) and (max-width: 375px) {
+    .cep-form {
+        padding: 0;
+    }
 }

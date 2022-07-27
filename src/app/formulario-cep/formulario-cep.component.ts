@@ -35,13 +35,30 @@ export class FormularioCepComponent implements OnInit {
   }
 
   searchCep() {
-    this._cepService.searchCEP(this.cepForm.value.valorCEP).subscribe((response) => {
-      this.dataCEP = response;
+    if(this.cepForm.value.valorCEP.length === 8) {
+      this._cepService.searchCEP(this.cepForm.value.valorCEP).subscribe((response) => {
 
-      this.address = response.address; 
-      this.district = response.district;
-      this.state = response.state;
-      this.city = response.city;
-    });  
+        this.dataCEP = response;
+  
+        this.address = response.address; 
+        this.district = response.district;
+        this.state = response.state;
+        this.city = response.city;
+      });  
+    }
+    if(this.cepForm.value.valorCEP.length === 0) {
+      this.clearForm();
+    }
+  }
+
+  clearForm() {
+
+    this.cepForm.reset({
+      'valorCEP': '',
+      'address': '',
+      'district': '',
+      'city': '',
+      'state': '',
+    });
   }
 }
