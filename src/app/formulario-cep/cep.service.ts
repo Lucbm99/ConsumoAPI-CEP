@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { EMPTY, Observable } from 'rxjs';
-import { catchError, map } from 'rxjs/operators';
+import { catchError, map, tap } from 'rxjs/operators';
 import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition } from '@angular/material/snack-bar';
 
 @Injectable({
@@ -21,8 +21,8 @@ export class CepService {
   public searchCEP(cep: string): Observable<any> {
     return this._httpClient.get<any>(`${this.baseURL}json/${cep}`)
       .pipe(
-        map((data: any) => 
-        data
+        tap((data: any) => 
+        data,
       ),
       catchError((error: HttpErrorResponse) => {
         console.log('error', error);

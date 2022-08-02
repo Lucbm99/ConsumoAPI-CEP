@@ -23,7 +23,7 @@ export class FormularioCepComponent implements OnInit {
 
   ngOnInit(): void {
     
-    //formulário para usuarios
+    //formulário para o cep
     this.cepForm = this._formBuilder.group({
       valorCEP: ['', [Validators.required]],
       address: [''],
@@ -42,17 +42,17 @@ export class FormularioCepComponent implements OnInit {
   
         this.address = response.address; 
         this.district = response.district;
-        this.state = response.state;
         this.city = response.city;
+        this.state = response.state;
       });  
     }
+    
     if(this.cepForm.value.valorCEP.length === 0) {
       this.clearForm();
     }
   }
 
   clearForm() {
-
     this.cepForm.reset({
       'valorCEP': '',
       'address': '',

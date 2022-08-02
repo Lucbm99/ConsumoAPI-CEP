@@ -1,7 +1,7 @@
 <form class="cep-form" [formGroup]="cepForm">
   <div class="fields">
     <h4 class="descricao">
-      Digite o CEP abaixo e verifique de qual endereço ele é:
+      Digite o CEP abaixo (sem traços) e, verifique de qual endereço ele é:
     </h4>
 
     <mat-form-field appearance="outline">
@@ -12,8 +12,12 @@
         [formControlName]="'valorCEP'"
         maxlength="8"
         autoFocus
+        required
         (input)="searchCep()"
       />
+      <mat-error *ngIf="cepForm.get('valorCEP')?.errors?.required">
+        O campo CEP é obrigatório.
+      </mat-error>
     </mat-form-field>
     <mat-form-field appearance="outline">
       <mat-label>Endereço</mat-label>
@@ -23,6 +27,7 @@
         readonly
         [formControlName]="'address'"
         [value]="address"
+        [(ngModel)]="address" 
       />
     </mat-form-field>
     <mat-form-field appearance="outline">
@@ -32,15 +37,16 @@
         readonly
         [formControlName]="'district'"
         [value]="district"
+        [(ngModel)]="district" 
       />
     </mat-form-field>
     <mat-form-field appearance="outline">
       <mat-label>Cidade</mat-label>
-      <input matInput readonly [formControlName]="'city'" [value]="city" />
+      <input matInput readonly [formControlName]="'city'" [value]="city" [(ngModel)]="city" />
     </mat-form-field>
     <mat-form-field appearance="outline">
       <mat-label>Estado</mat-label>
-      <input matInput readonly [formControlName]="'state'" [value]="state" />
+      <input matInput readonly [formControlName]="'state'" [value]="state" [(ngModel)]="state" />
     </mat-form-field>
     <!-- <button (click)="searchCep()">Buscar</button> -->
   </div>
