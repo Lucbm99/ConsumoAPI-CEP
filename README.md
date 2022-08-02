@@ -35,9 +35,9 @@ NPM: https://npmjs.com
 
 ## 📦 Status da aplicação
 
-🚧 Em andamento 🚧
+🚧 Finalizado 🚧
 
-Link para acesso: 
+Link para acesso: https://consulta-cep-ten.vercel.app/
 
 Vídeo demo da aplicação: 
 
