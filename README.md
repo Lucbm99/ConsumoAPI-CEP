@@ -1,7 +1,7 @@
 # Consumo de API - CEPs
 Para fins de estudo do framework Angular, foi feita uma aplicação para consumir os dados da API de Códigos de Endereçamento Postal (CEPs). Nela, ao digitarmos o valor de um campo CEP no campo respectivo, os dados de endereço, cidade, estado e bairro são carregados automaticamente. 
 
-Link da API: https://cep.awesomeapi.com.br/
+Link da API: https://cep.awesomeapi.com.br
 
 
 ## 🚀 Instruções 
