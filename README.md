@@ -14,7 +14,7 @@ Links úteis:
 
 VS Code: https://code.visualstudio.com/
 
-Git: https://git-scm.com/
+Git: https://git-scm.com
 
 Sublime Text: https://www.sublimetext.com/
 
