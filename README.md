@@ -12,7 +12,7 @@ Para isso, você irá precisar basicamente ter um editor de código em sua máqu
 
 Links úteis: 
 
-VS Code: https://code.visualstudio.com/
+VS Code: https://code.visualstudio.com
 
 Git: https://git-scm.com
 
