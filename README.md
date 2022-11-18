@@ -18,7 +18,7 @@ Git: https://git-scm.com
 
 Sublime Text: https://www.sublimetext.com/
 
-NodeJS: https://nodejs.org/en/
+NodeJS: https://nodejs.org/en
 
 NPM: https://npmjs.com
 
