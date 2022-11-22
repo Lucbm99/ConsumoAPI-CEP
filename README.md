@@ -44,7 +44,7 @@ Vídeo demo da aplicação: https://youtu.be/lMnkA7T_D3I
 
 ## 🛠️ Feito com
 * [NodeJS](https://nodejs.org/en/)
-* [Angular](http://angular.io/)
+* [Angular](http://angular.io)
 * [Git](https://git-scm.com/downloads)
 * [NPM](https://npmjs.com/)
 
