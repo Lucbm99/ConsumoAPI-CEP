@@ -16,7 +16,7 @@ VS Code: https://code.visualstudio.com
 
 Git: https://git-scm.com
 
-Sublime Text: https://www.sublimetext.com/
+Sublime Text: https://www.sublimetext.com
 
 NodeJS: https://nodejs.org/en
 
